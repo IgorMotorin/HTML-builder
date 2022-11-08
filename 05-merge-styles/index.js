@@ -4,7 +4,7 @@ const fsp = require('fs').promises;
 const path = require('path');
 
 
-console.log('Start =>')
+// console.log('Start =>')
 
 async function mergeStyle(src, dist) {
     // await fsp.mkdir(dist).catch(err => console.error(err));
@@ -33,6 +33,6 @@ let dist = path.join(__dirname, 'project-dist')
 mergeStyle(src, dist);
 
 
-src = path.join(__dirname, 'test-files', 'styles')
-dist = path.join(__dirname, 'project-dist1')
-mergeStyle(src, dist);
+// src = path.join(__dirname, 'test-files', 'styles')
+// dist = path.join(__dirname, 'project-dist1')
+// mergeStyle(src, dist);

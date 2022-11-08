@@ -2,7 +2,7 @@ const fsp = require('fs').promises;
 const fs = require('fs');
 const path = require('path');
 
-console.log('Start =>')
+// console.log('Start =>')
 
 async function copyDir(src,dest) {
     const entries = await fsp.readdir(src, {withFileTypes: true});
@@ -21,6 +21,7 @@ async function copyDir(src,dest) {
 }
 
 async function delFile(dest) {
+    await fsp.mkdir(dest).catch(err => console.error(err));
     const entries = await fsp.readdir(dest, {withFileTypes: true});
 
     for(let entry of entries) {       

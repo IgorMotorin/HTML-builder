@@ -1,7 +1,7 @@
 const fsp = require('fs').promises;
 const path = require('path');
 
-console.log('Start =>')
+// console.log('Start =>')
 
 async function showDir(src) {
     const entries = await fsp.readdir(src, {withFileTypes: true});
